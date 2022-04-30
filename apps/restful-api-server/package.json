@@ -1,7 +1,7 @@
 {
   "name": "restful-api-server",
   "version": "1.0.0",
-  "description": "my first restful api  with node\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[",
+  "description": "my first restful api  with node",
   "main": "server.js",
   "directories": {
     "test": "test"
