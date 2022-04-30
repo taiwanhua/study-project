@@ -3,7 +3,7 @@ import Box, { BoxProps } from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import MUIDrawer from "@mui/material/Drawer";
 import Divider from "@mui/material/Divider"; 
-import { useSX } from "../../../hooks/useSX";
+import { useSX } from "hooks/useSX";
 import Menu from "../Menu/Menu";
 
 export interface Props {

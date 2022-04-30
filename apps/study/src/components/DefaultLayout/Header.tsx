@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import MenuIcon from "@mui/icons-material/Menu"; 
 import { Theme } from "@mui/material";
 import Drawer from "./Drawer/Drawer";
-import { useSX } from "../../hooks/useSX";
+import { useSX } from "hooks/useSX";
 
 export interface Props {
   className?: string;

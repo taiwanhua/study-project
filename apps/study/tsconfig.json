@@ -14,11 +14,13 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    // 這個專案是經由CRA建立的無法使用 @作為別名(alias)使用
+    "baseUrl":"src"
     // "baseUrl": "./src",
     // "paths": {
     //   "@/*": ["./*"]
     // }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["src","next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
