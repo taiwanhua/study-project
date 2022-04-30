@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model firsttable {
+  id        String  @id @db.VarChar(100)
+  name      String  @db.VarChar(100)
+  cellphone String  @db.VarChar(100)
+  adress    String  @db.VarChar(100)
+  memo      String? @db.VarChar(100)
+}
+
+model threetable {
+  id        Int     @id @default(autoincrement())
+  name      String  @db.VarChar(100)
+  cellphone String  @db.VarChar(100)
+  adress    String  @db.VarChar(100)
+  memo      String? @db.VarChar(100)
+}
+
+model two {
+  id       String  @id @db.VarChar(100)
+  roleName String? @db.VarChar(100)
+}
