@@ -1,10 +1,9 @@
-import { FC, memo, useCallback, useMemo } from "react";
+import { FC, memo } from "react";
 import Box, { BoxProps } from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+
 import MenuIcon from "@mui/icons-material/Menu"; 
 import { Theme } from "@mui/material";
 import Drawer from "./Drawer/Drawer";
@@ -21,16 +20,13 @@ const Header: FC<Props> = ({ className, sx, menuConfigs }) => {
     () => ({ zIndex: (theme: Theme) => theme.zIndex.drawer + 1 }),
     []
   );
-  const typographySx = useSX(() => ({ flexGrow: 1 }), []);
+ 
   const iconButtonSx = useSX(() => ({ marginRight: 2 }), []);
-  const territorySelectSx = useSX(
-    () => ({ paddingLeft: 2, paddingRight: 2 }),
-    []
-  );
+
 
   return (
     <Box className={className} sx={sx}>
-      <AppBar position="fixed" sx={appBarSx} color="default">
+      <AppBar position="fixed" sx={appBarSx} color="default" >
         <Toolbar>
           <IconButton
             size="large"
@@ -43,6 +39,7 @@ const Header: FC<Props> = ({ className, sx, menuConfigs }) => {
           >
             <MenuIcon />
           </IconButton>
+          
         </Toolbar>
       </AppBar>
       <Drawer menuConfigs={menuConfigs} />

@@ -1,10 +1,11 @@
-import { FC, memo, useCallback } from "react";
+import { FC, memo } from "react";
 import Box, { BoxProps } from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import MUIDrawer from "@mui/material/Drawer";
-import Divider from "@mui/material/Divider"; 
+ 
 import { useSX } from "hooks/useSX";
 import Menu from "../Menu/Menu";
+import { MenuItem } from "@mui/material";
 
 export interface Props {
   className?: string;
@@ -40,6 +41,9 @@ const Drawer: FC<Props> = ({ className, sx, menuConfigs }) => {
       <Toolbar />
       <Box sx={boxSx}>
         <Menu menuConfigs={menuConfigs} />
+        <MenuItem >firsttable</MenuItem>
+        <MenuItem >twotable</MenuItem>
+        <MenuItem >threetable</MenuItem>
       </Box>
     </MUIDrawer>
   );
