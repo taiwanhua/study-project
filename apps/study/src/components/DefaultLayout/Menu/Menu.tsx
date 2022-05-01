@@ -1,4 +1,4 @@
-import { MenuItem } from "@mui/material";
+import MenuItem from "@mui/material/MenuItem";
 import List, { ListProps } from "@mui/material/List";
 import { FC, memo } from "react";
 import { Link } from "react-router-dom";
@@ -12,10 +12,8 @@ const Menu: FC<Props> = ({ className, menuConfigs }) => {
   return (
     <List className={className}>
       {menuConfigs.map((menuConfig) => (
-        <MenuItem>
-          <Link to={`/${menuConfig}`} className="link ">
-            {menuConfig}
-          </Link>
+        <MenuItem component={Link} to={`/${menuConfig}`}>
+          {menuConfig}
         </MenuItem>
       ))}
     </List>
