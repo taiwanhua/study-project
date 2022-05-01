@@ -1,21 +1,10 @@
-import React from 'react';
-
-import './App.css';
-import Layout from 'components/DefaultLayout/Layout';
-
-
-
+import React from "react";
+import "./App.css";
+import Layout from "components/DefaultLayout/Layout";
 
 function App() {
-  return (
-
-    
-    <Layout menuConfigs={[]}>
-      dd
-
-      
-    </Layout>
-  );
+  const menuConfigs = ["firsttable", "twotable", "threetable"];
+  return <Layout menuConfigs={menuConfigs}>dd</Layout>;
 }
 
 export default App;

@@ -1,24 +1,16 @@
 import { FC, memo, PropsWithChildren } from "react";
 import Box, { BoxProps } from "@mui/material/Box";
-import Header from "./Header"; 
-import { Toolbar } from "@mui/material"; 
+import Header from "./Header";
+import { Toolbar } from "@mui/material";
 import { useSX } from "../../hooks/useSX";
-
 
 export type Props = PropsWithChildren<{
   className?: string;
   sx?: BoxProps["sx"];
-  pageTitle?: string;
-  menuConfigs: [];
+  menuConfigs: string[];
 }>;
 
-const Layout: FC<Props> = ({
-  className,
-  sx,
-  children,
-  menuConfigs = [],
-  pageTitle,
-}) => {
+const Layout: FC<Props> = ({ className, sx, children, menuConfigs = [] }) => {
   const boxSx = useSX(() => ({ display: "flex", ...sx }), [sx]);
   const mainBoxSx = useSX(() => ({ flexGrow: 1, padding: 3 }), []);
 

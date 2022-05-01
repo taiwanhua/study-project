@@ -2,7 +2,6 @@ import { FC, memo } from "react";
 import Box, { BoxProps } from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import MUIDrawer from "@mui/material/Drawer";
- 
 import { useSX } from "hooks/useSX";
 import Menu from "../Menu/Menu";
 import { MenuItem } from "@mui/material";
@@ -10,13 +9,12 @@ import { MenuItem } from "@mui/material";
 export interface Props {
   className?: string;
   sx?: BoxProps["sx"];
-  menuConfigs: [];
+  menuConfigs: string[];
 }
 
 const drawerWidth = 240;
 
-const Drawer: FC<Props> = ({ className, sx, menuConfigs }) => { 
-
+const Drawer: FC<Props> = ({ className, sx, menuConfigs }) => {
   const MUIDrawerSx = useSX(
     () => ({
       width: drawerWidth,
@@ -41,9 +39,6 @@ const Drawer: FC<Props> = ({ className, sx, menuConfigs }) => {
       <Toolbar />
       <Box sx={boxSx}>
         <Menu menuConfigs={menuConfigs} />
-        <MenuItem >firsttable</MenuItem>
-        <MenuItem >twotable</MenuItem>
-        <MenuItem >threetable</MenuItem>
       </Box>
     </MUIDrawer>
   );
