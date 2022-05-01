@@ -3,6 +3,7 @@ import Box, { BoxProps } from "@mui/material/Box";
 import Header from "./Header";
 import { Toolbar } from "@mui/material";
 import { useSX } from "../../hooks/useSX";
+import { Outlet } from "react-router-dom";
 
 export type Props = PropsWithChildren<{
   className?: string;
@@ -19,7 +20,7 @@ const Layout: FC<Props> = ({ className, sx, children, menuConfigs = [] }) => {
       <Header menuConfigs={menuConfigs} />
       <Box component="main" sx={mainBoxSx}>
         <Toolbar />
-        {children}
+        <Outlet />
       </Box>
     </Box>
   );
