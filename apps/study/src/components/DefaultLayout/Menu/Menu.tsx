@@ -12,7 +12,7 @@ const Menu: FC<Props> = ({ className, menuConfigs }) => {
   return (
     <List className={className}>
       {menuConfigs.map((menuConfig) => (
-        <MenuItem component={Link} to={`/${menuConfig}`}>
+        <MenuItem key={menuConfig} component={Link} to={`/${menuConfig}`}>
           {menuConfig}
         </MenuItem>
       ))}

@@ -8,7 +8,7 @@ datasource db {
 }
 
 model firsttable {
-  id        String  @id @db.VarChar(100)
+  id        Int     @id @default(autoincrement())
   name      String  @db.VarChar(100)
   cellphone String  @db.VarChar(100)
   adress    String  @db.VarChar(100)
